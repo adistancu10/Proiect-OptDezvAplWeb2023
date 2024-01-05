@@ -8,6 +8,9 @@
         public string Prenume { get; set; }
 
         public DateTime Data_Nastere { get; set;}
+
+        public ICollection<Carte> Carti { get; set; }
+
     }
 }
 

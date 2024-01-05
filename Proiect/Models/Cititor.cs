@@ -10,5 +10,8 @@
 
         public string Adresa { get; set; }
 
+        public ICollection<Imprumut> Imprumuturi { get; set; }
+
+
     }
 }

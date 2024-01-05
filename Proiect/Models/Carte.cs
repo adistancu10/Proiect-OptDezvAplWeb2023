@@ -9,5 +9,9 @@
 
         public string Gen { get; set; }
 
+        public ICollection<Exemplar> Exemplare { get; set; }
+
+        public ICollection<Imprumut> Imprumuturi { get; set; }
+
     }
 }
