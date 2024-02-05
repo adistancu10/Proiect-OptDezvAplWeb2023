@@ -2,7 +2,7 @@
 
 namespace Proiect.Models
 {
-    public class Elev : BaseEntity
+    public class Diriginte : BaseEntity
     {
         public string? Nume { get; set; }
 
@@ -11,8 +11,6 @@ namespace Proiect.Models
         public string? CNP { get; set; }
 
         public int Varsta { get; set; }
-
-
 
     }
 }

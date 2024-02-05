@@ -2,17 +2,13 @@
 
 namespace Proiect.Models
 {
-    public class Elev : BaseEntity
+    public class Profesor : BaseEntity
     {
         public string? Nume { get; set; }
 
         public string? Prenume { get; set; }
 
         public string? CNP { get; set; }
-
-        public int Varsta { get; set; }
-
-
 
     }
 }
