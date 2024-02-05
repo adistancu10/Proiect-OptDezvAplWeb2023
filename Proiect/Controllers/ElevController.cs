@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Proiect.Data;
 using Proiect.Models;
 using Microsoft.EntityFrameworkCore;
-
+using System;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Proiect.Controllers
 {
@@ -53,11 +55,26 @@ namespace Proiect.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(Elev _elev)
+        public async Task<IActionResult> Add(Elev elevi)
         {
-            _dbContext.Elevi.Add(_elev);
+            _dbContext.Elevi.Add(elevi);
             await _dbContext.SaveChangesAsync();
-            return Ok(_elev);
+            return Ok(elevi);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var elev = await _dbContext.Elevi.FirstOrDefaultAsync(el => el.Id == id);
+            
+            if (elev == null)
+            {
+                return NotFound();
+            }
+            _dbContext.Elevi.Remove(elev);
+            await _dbContext.SaveChangesAsync();
+
+            return Ok(elev);
         }
 
     }
