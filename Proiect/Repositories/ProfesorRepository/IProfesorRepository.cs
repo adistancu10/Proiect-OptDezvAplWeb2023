@@ -5,7 +5,10 @@ namespace Proiect.Repositories.ProfesorRepository
 {
     public interface IProfesorRepository : IGenericRepository<Profesor>
     {
-        List<Profesor> OrderByNume(string nume);
-        List<dynamic> GetAllWithJoin();
+        Task<List<Profesor>> GetAllAsync();
+        Task<Profesor> GetByIdAsync(Guid id);
+        Task CreateAsync(Profesor profesor);
+        Task UpdateAsync(Profesor profesor);
+        Task DeleteAsync(Guid id);
     }
 }
