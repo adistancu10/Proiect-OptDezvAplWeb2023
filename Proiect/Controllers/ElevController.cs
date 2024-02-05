@@ -27,7 +27,38 @@ namespace Proiect.Controllers
             return Ok(elevi);
         }
 
+        [HttpGet("{id}")]
 
+        public async Task<IActionResult> GetById(Guid id)
+        {
+            var elev = await _dbContext.Elevi.FirstOrDefaultAsync(el => el.Id == id);
+            if (elev == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(elev);
+        }
+
+        [HttpGet("filter/{name}/{cnp}")]
+        public async Task<IActionResult> GetWithFilter(string name, string cnp)
+        {
+            var elev = await _dbContext.Elevi.FirstOrDefaultAsync(el => el.Nume.Equals(name) && el.CNP == cnp);
+            if(elev == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(elev);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Add(Elev _elev)
+        {
+            _dbContext.Elevi.Add(_elev);
+            await _dbContext.SaveChangesAsync();
+            return Ok(_elev);
+        }
 
     }
 }
