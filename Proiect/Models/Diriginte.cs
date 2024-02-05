@@ -14,6 +14,7 @@ namespace Proiect.Models
 
         //relatia One-to-One cu "Clasa"
 
+        public Guid ClasaId { get; set; }
         public Clasa Clasa { get; set; }
 
     }

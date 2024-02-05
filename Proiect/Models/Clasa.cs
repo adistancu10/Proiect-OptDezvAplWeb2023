@@ -6,6 +6,8 @@ namespace Proiect.Models
     {
         public string? NumeClasa { get; set; }
 
+        public int nrElevi { get; set; }
+
         //relatie One-to-Many cu "Elev"
         public ICollection<Elev> Elevi { get; set; }
 
