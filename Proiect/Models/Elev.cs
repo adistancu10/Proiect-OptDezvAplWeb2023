@@ -12,7 +12,19 @@ namespace Proiect.Models
 
         public int Varsta { get; set; }
 
+        //relatie One-to-Many cu "Clasa"
 
+        public Guid ClasaId { get; set; }
+        public Clasa Clasa { get; set; }
+
+        //relatie One-to-Many cu "Profesor"
+
+        public Guid ProfesorId { get; set; }
+        public Profesor Profesor { get; set; }
+
+        //relatia Many-to-Many cu "Materie"
+
+        public ICollection<ElevMaterie> ElevMaterie { get; set; }
 
     }
 }

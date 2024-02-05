@@ -6,5 +6,8 @@ namespace Proiect.Models
     {
         public string? NumeMaterie { get; set; }
 
+        //relatia Many-to-Many cu "Elev"
+
+        public ICollection<ElevMaterie> ElevMaterie { get; set; }
     }
 }

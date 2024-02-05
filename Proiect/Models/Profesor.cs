@@ -10,5 +10,9 @@ namespace Proiect.Models
 
         public string? CNP { get; set; }
 
+        //relatie One-to-Many cu "Elev"
+
+        public ICollection<Elev> Elevi { get; set; }
+
     }
 }

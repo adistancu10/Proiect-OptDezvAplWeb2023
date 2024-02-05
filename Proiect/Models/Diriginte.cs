@@ -12,5 +12,9 @@ namespace Proiect.Models
 
         public int Varsta { get; set; }
 
+        //relatia One-to-One cu "Clasa"
+
+        public Clasa Clasa { get; set; }
+
     }
 }
