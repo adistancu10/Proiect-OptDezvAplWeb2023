@@ -16,7 +16,7 @@ namespace Proiect.Repositories.ClasaRepository
         {
         }
 
-        public async Task<List<Clasa>> GetAllAsync()
+        public new async Task<List<Clasa>> GetAllAsync()
         {
             return await _context.Clase.ToListAsync();
         }

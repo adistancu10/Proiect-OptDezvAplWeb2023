@@ -2,7 +2,7 @@
 {
     public class MaterieDTO
     {
-        public Guid id { get; set; }
+        public Guid Id { get; set; }
         public string NumeMaterie { get; set; }
     }
 }

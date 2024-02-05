@@ -14,6 +14,8 @@ namespace Proiect.Data
         public DbSet<Materie> Materii { get; set; }
         public DbSet<ElevMaterie> EleviMaterii { get; set; }
 
+        public DbSet<User> Users { get; set; }
+
         public tableContext(DbContextOptions<tableContext> options) : base(options) { }
 
 

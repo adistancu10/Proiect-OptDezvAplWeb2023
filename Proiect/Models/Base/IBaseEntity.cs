@@ -2,7 +2,7 @@
 {
     public interface IBaseEntity
     {
-        Guid id { get; set; }
+        Guid Id { get; set; }
 
     }
 }

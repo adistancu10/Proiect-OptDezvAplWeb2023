@@ -1,4 +1,7 @@
-﻿/*namespace Proiect.Helpers
+﻿using Proiect.Helpers.JwtUtil;
+using Proiect.Services.UserService;
+
+namespace Proiect.Helpers
 {
     public class JwtMiddleware
     {
@@ -22,4 +25,3 @@
         }
     }
 }
-*/
